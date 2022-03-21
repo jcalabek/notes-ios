@@ -1,25 +1,27 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct NotesView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        NoteItemEditor(item: item)
-                    } label: {
-                        NoteItemRow(title: formatLabel(text: item.text!))
+            VStack {
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            NoteItemEditor(item: item)
+                        } label: {
+                            NoteItemRow(title: formatLabel(text: item.text!))
+                        }
                     }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -31,10 +33,9 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
         }
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -71,19 +72,10 @@ struct ContentView: View {
             label += "..."
         }
         
+        if text.isEmpty {
+            label = "..."
+        }
+        
         return label
-    }
-}
-
-//private let itemFormatter: DateFormatter = {
-//    let formatter = DateFormatter()
-//    formatter.dateStyle = .short
-//    formatter.timeStyle = .medium
-//    return formatter
-//}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

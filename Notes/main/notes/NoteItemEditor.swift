@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct NoteItemEditor: View {
+    @Environment(\.isPresented) var isPresented
     private let item: Item
     
     @State private var editorText: String
@@ -20,6 +21,11 @@ struct NoteItemEditor: View {
                     }) {
                         Text("Save")
                     }
+                }
+            }
+            .onChange(of: isPresented) { isYes in
+                if !isYes && Prefs.isAutoSave() {
+                    saveItem()
                 }
             }
     }

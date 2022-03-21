@@ -1,10 +1,3 @@
-//
-//  NotesApp.swift
-//  Notes
-//
-//  Created by Victor Varenik on 19.03.2022.
-//
-
 import SwiftUI
 
 @main
@@ -13,7 +6,7 @@ struct NotesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

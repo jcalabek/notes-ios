@@ -8,27 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		5A47AAF227E6527C00C86F65 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAF127E6527C00C86F65 /* NotesApp.swift */; };
-		5A47AAF427E6527C00C86F65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAF327E6527C00C86F65 /* ContentView.swift */; };
+		5A47AAF427E6527C00C86F65 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAF327E6527C00C86F65 /* MainView.swift */; };
 		5A47AAF627E6527D00C86F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A47AAF527E6527D00C86F65 /* Assets.xcassets */; };
 		5A47AAF927E6527D00C86F65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A47AAF827E6527D00C86F65 /* Preview Assets.xcassets */; };
 		5A47AAFB27E6527D00C86F65 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAFA27E6527D00C86F65 /* Persistence.swift */; };
 		5A47AAFE27E6527D00C86F65 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAFC27E6527D00C86F65 /* Notes.xcdatamodeld */; };
 		5A644B7727E8CFD300F1DAE4 /* NoteItemEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A644B7627E8CFD300F1DAE4 /* NoteItemEditor.swift */; };
 		5A644B7927E8CFE900F1DAE4 /* NoteItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A644B7827E8CFE900F1DAE4 /* NoteItemRow.swift */; };
-		5A644B7B27E8F03100F1DAE4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A644B7A27E8F03100F1DAE4 /* README.md */; };
+		5A7635F927E8F6A600EDBC32 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7635F827E8F6A600EDBC32 /* NotesView.swift */; };
+		5A7635FB27E8F7B400EDBC32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7635FA27E8F7B400EDBC32 /* SettingsView.swift */; };
+		5A7635FF27E8FF8600EDBC32 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7635FE27E8FF8600EDBC32 /* Prefs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A47AAEE27E6527C00C86F65 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A47AAF127E6527C00C86F65 /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
-		5A47AAF327E6527C00C86F65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A47AAF327E6527C00C86F65 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5A47AAF527E6527D00C86F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A47AAF827E6527D00C86F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A47AAFA27E6527D00C86F65 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5A47AAFD27E6527D00C86F65 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		5A644B7627E8CFD300F1DAE4 /* NoteItemEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemEditor.swift; sourceTree = "<group>"; };
 		5A644B7827E8CFE900F1DAE4 /* NoteItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemRow.swift; sourceTree = "<group>"; };
-		5A644B7A27E8F03100F1DAE4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5A7635F827E8F6A600EDBC32 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		5A7635FA27E8F7B400EDBC32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5A7635FE27E8FF8600EDBC32 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +65,13 @@
 		5A47AAF027E6527C00C86F65 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				5A644B7C27E8F12600F1DAE4 /* main */,
 				5A47AAF127E6527C00C86F65 /* NotesApp.swift */,
-				5A47AAF327E6527C00C86F65 /* ContentView.swift */,
 				5A47AAF527E6527D00C86F65 /* Assets.xcassets */,
 				5A47AAFA27E6527D00C86F65 /* Persistence.swift */,
 				5A47AAFC27E6527D00C86F65 /* Notes.xcdatamodeld */,
 				5A47AAF727E6527D00C86F65 /* Preview Content */,
-				5A644B7627E8CFD300F1DAE4 /* NoteItemEditor.swift */,
-				5A644B7827E8CFE900F1DAE4 /* NoteItemRow.swift */,
-				5A644B7A27E8F03100F1DAE4 /* README.md */,
+				5A7635FE27E8FF8600EDBC32 /* Prefs.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -80,6 +82,34 @@
 				5A47AAF827E6527D00C86F65 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A644B7C27E8F12600F1DAE4 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				5A7635FD27E8F80100EDBC32 /* notes */,
+				5A7635FC27E8F7F400EDBC32 /* settings */,
+				5A47AAF327E6527C00C86F65 /* MainView.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		5A7635FC27E8F7F400EDBC32 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A7635FA27E8F7B400EDBC32 /* SettingsView.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		5A7635FD27E8F80100EDBC32 /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				5A644B7627E8CFD300F1DAE4 /* NoteItemEditor.swift */,
+				5A644B7827E8CFE900F1DAE4 /* NoteItemRow.swift */,
+				5A7635F827E8F6A600EDBC32 /* NotesView.swift */,
+			);
+			path = notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +170,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A644B7B27E8F03100F1DAE4 /* README.md in Resources */,
 				5A47AAF927E6527D00C86F65 /* Preview Assets.xcassets in Resources */,
 				5A47AAF627E6527D00C86F65 /* Assets.xcassets in Resources */,
 			);
@@ -153,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7635FF27E8FF8600EDBC32 /* Prefs.swift in Sources */,
+				5A7635F927E8F6A600EDBC32 /* NotesView.swift in Sources */,
+				5A7635FB27E8F7B400EDBC32 /* SettingsView.swift in Sources */,
 				5A644B7727E8CFD300F1DAE4 /* NoteItemEditor.swift in Sources */,
 				5A47AAFB27E6527D00C86F65 /* Persistence.swift in Sources */,
-				5A47AAF427E6527C00C86F65 /* ContentView.swift in Sources */,
+				5A47AAF427E6527C00C86F65 /* MainView.swift in Sources */,
 				5A644B7927E8CFE900F1DAE4 /* NoteItemRow.swift in Sources */,
 				5A47AAF227E6527C00C86F65 /* NotesApp.swift in Sources */,
 				5A47AAFE27E6527D00C86F65 /* Notes.xcdatamodeld in Sources */,
@@ -295,6 +327,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -307,7 +340,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,6 +358,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -337,7 +371,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
