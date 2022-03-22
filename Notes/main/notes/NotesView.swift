@@ -10,29 +10,33 @@ struct NotesView: View {
     private var items: FetchedResults<Item>
     
     var body: some View {
-        NavigationView {
+        VStack {
             VStack {
                 List {
                     ForEach(items) { item in
                         NavigationLink {
                             NoteItemEditor(item: item)
                         } label: {
-                            NoteItemRow(title: formatLabel(text: item.text!))
+                            if item.text != nil {
+                                NoteItemRow(title: formatLabel(text: item.text!))
+                            } else {
+                                Text("?")
+                            }
                         }
                     }
                     .onDelete(perform: deleteItems)
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                ToolbarItem {
+//                    Button(action: addItem) {
+//                        Label("Add Item", systemImage: "plus")
+//                    }
+//                }
+//            }
         }
     }
     

@@ -2,13 +2,18 @@ import SwiftUI
 
 struct NoteItemEditor: View {
     @Environment(\.isPresented) var isPresented
+    
     private let item: Item
     
     @State private var editorText: String
     
     init(item: Item) {
         self.item = item
-        self.editorText = item.text!
+        if item.text != nil {
+            self.editorText = item.text!
+        } else {
+            self.editorText = "ERROR"
+        }
     }
     
     var body: some View {

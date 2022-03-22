@@ -2,19 +2,35 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
-           NotesView()
-             .tabItem {
-                Image(systemName: "list.dash")
-                Text("Notes")
-              }
-            
-            SettingsView()
-              .tabItem {
-                 Image(systemName: "gear")
-                 Text("Settings")
-               }
+        NavigationView {
+            TabView {
+               NotesView()
+                 .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Notes")
+                  }
+                
+                SettingsView()
+                  .tabItem {
+                     Image(systemName: "gear")
+                     Text("Settings")
+                   }
+            }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
+            ToolbarItem {
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
+            }
+        }
+    }
+    
+    private func addItem() {
+        
     }
 }
 
