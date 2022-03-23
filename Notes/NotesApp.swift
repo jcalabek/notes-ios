@@ -2,12 +2,12 @@ import SwiftUI
 
 @main
 struct NotesApp: App {
-    let persistenceController = PersistenceController.shared
+    @ObservedObject static var coreDataStack = CoreDataStack()
 
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, NotesApp.coreDataStack.container.viewContext)
         }
     }
 }

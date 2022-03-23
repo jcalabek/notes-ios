@@ -11,7 +11,7 @@ class NotesController {
     static var shared = NotesController()
     
     func newNote() {
-        let newItem = Item(context: viewContext)
+        let newItem = Item(context: getContext())
         newItem.timestamp = Date()
         newItem.text = "New note"
 
@@ -21,10 +21,6 @@ class NotesController {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
-        
-//        withAnimation {
-//
-//        }
     }
     
     func getItems() -> FetchedResults<Item> {
@@ -32,6 +28,6 @@ class NotesController {
     }
     
     func getContext() -> NSManagedObjectContext {
-        return viewContext
+        return NotesApp.coreDataStack.container.viewContext
     }
 }

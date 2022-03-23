@@ -2,6 +2,8 @@ import SwiftUI
 import CoreData
 
 struct NotesView: View {
+    // @ObservedObject var coreData = CoreDataStack.shared
+    
     var body: some View {
         VStack {
             List {
