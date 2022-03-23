@@ -8,11 +8,7 @@ class NotesController {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default)
     private var items: FetchedResults<Item>
     
-    static var shared: NotesController = {
-        let instance = NotesController()
-        
-        return instance
-    }()
+    static var shared = NotesController()
     
     func newNote() {
         let newItem = Item(context: viewContext)

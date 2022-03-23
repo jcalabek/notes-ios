@@ -4,7 +4,7 @@ struct SettingsView: View {
     @State private var isAutoSave: Bool
     
     init() {
-        isAutoSave = Prefs.isAutoSave()
+        isAutoSave = PrefsController.isAutoSave()
     }
     
     var body: some View {

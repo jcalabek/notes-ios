@@ -29,7 +29,7 @@ struct NoteItemEditor: View {
                 }
             }
             .onChange(of: isPresented) { isYes in
-                if !isYes && Prefs.isAutoSave() {
+                if !isYes && PrefsController.isAutoSave() {
                     saveItem()
                 }
             }

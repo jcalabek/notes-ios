@@ -1,6 +1,6 @@
 import Foundation
 
-class Prefs {
+class PrefsController {
     static func isAutoSave() -> Bool {
         let defaults = UserDefaults.standard
         return !defaults.bool(forKey: "autosave")
