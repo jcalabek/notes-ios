@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct MainView: View {
+    @Environment(\.managedObjectContext)
+    private var viewContext
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -33,7 +36,16 @@ struct MainView: View {
     }
     
     private func addItem() {
-        NotesController.shared.newNote()
+        let newItem = Item(context: viewContext)
+        newItem.timestamp = Date()
+        newItem.text = "New note"
+
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
 

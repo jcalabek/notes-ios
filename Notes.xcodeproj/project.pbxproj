@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A4444A927EA1FC200B1FB0E /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4444A827EA1FC200B1FB0E /* NotesController.swift */; };
 		5A47AAF227E6527C00C86F65 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAF127E6527C00C86F65 /* NotesApp.swift */; };
 		5A47AAF427E6527C00C86F65 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A47AAF327E6527C00C86F65 /* MainView.swift */; };
 		5A47AAF627E6527D00C86F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A47AAF527E6527D00C86F65 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5A4444A827EA1FC200B1FB0E /* NotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		5A47AAEE27E6527C00C86F65 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A47AAF127E6527C00C86F65 /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		5A47AAF327E6527C00C86F65 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				5A47AAFC27E6527D00C86F65 /* Notes.xcdatamodeld */,
 				5A47AAF727E6527D00C86F65 /* Preview Content */,
 				5A7635FE27E8FF8600EDBC32 /* PrefsController.swift */,
-				5A4444A827EA1FC200B1FB0E /* NotesController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 				5A7635FB27E8F7B400EDBC32 /* SettingsView.swift in Sources */,
 				5A644B7727E8CFD300F1DAE4 /* NoteItemEditor.swift in Sources */,
 				5A47AAFB27E6527D00C86F65 /* CoreDataStack.swift in Sources */,
-				5A4444A927EA1FC200B1FB0E /* NotesController.swift in Sources */,
 				5A47AAF427E6527C00C86F65 /* MainView.swift in Sources */,
 				5A644B7927E8CFE900F1DAE4 /* NoteItemRow.swift in Sources */,
 				5A47AAF227E6527C00C86F65 /* NotesApp.swift in Sources */,

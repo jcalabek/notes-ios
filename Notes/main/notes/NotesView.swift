@@ -2,12 +2,16 @@ import SwiftUI
 import CoreData
 
 struct NotesView: View {
-    // @ObservedObject var coreData = CoreDataStack.shared
+    @Environment(\.managedObjectContext)
+    private var viewContext
+
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default)
+    private var items: FetchedResults<Item>
     
     var body: some View {
         VStack {
             List {
-                ForEach(NotesController.shared.getItems()) { item in
+                ForEach(items) { item in
                     NavigationLink {
                         NoteItemEditor(item: item)
                     } label: {
@@ -25,10 +29,10 @@ struct NotesView: View {
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { NotesController.shared.getItems()[$0] }.forEach(NotesController.shared.getContext().delete)
+            offsets.map { items[$0] }.forEach(viewContext.delete)
 
             do {
-                try NotesController.shared.getContext().save()
+                try viewContext.save()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
