@@ -1,5 +1,7 @@
 import SwiftUI
 
+// let notesController = NotesController()
+
 @main
 struct NotesApp: App {
     let persistenceController = PersistenceController.shared

@@ -15,12 +15,15 @@ struct MainView: View {
                      Image(systemName: "gear")
                      Text("Settings")
                    }
+            }.toolbar {
+                ToolbarItem {
+                    Button(action: addItem) {
+                        Label("Add Item", systemImage: "plus")
+                    }
+                }
             }
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                EditButton()
-            }
             ToolbarItem {
                 Button(action: addItem) {
                     Label("Add Item", systemImage: "plus")
@@ -30,7 +33,7 @@ struct MainView: View {
     }
     
     private func addItem() {
-        
+        NotesController.shared.newNote()
     }
 }
 
